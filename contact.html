@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zay Shop - Contact</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets/img/logo.jpeg">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/isotipo.ico">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
+    <!-- Load map styles -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+
+</head>
+
+<body>
+
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow custom-header">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+                <img src="assets/img/logo.jpeg" alt="Logo" style="height:80px;">
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+                id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-header" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-header" href="about.html">Detalle</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-header" href="contact.html"><b>Libro de Reclamaciones</b></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <!-- Modal -->
+    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Start Content Page -->
+    <div class="container-fluid bg-light py-5">
+        <div class="col-md-6 m-auto text-center">
+            <h1 class="h1 text-header"><b>Libro de Reclamaciones</b></h1>
+            <img class="img-fluid" src="./assets/img/libro_reclamaciones.jpg" alt="">
+            <p>
+                Complete el siguiente formulario.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Start Contact -->
+    <div class="container py-5">
+        <div class="row pb-5">
+            <!-- <form class="col-md-9 m-auto" action="https://formspree.io/f/xrervnnl" method="post" role="form"> -->
+            <form class="col-md-9 m-auto" id="contact-form">
+                <div class="mb-4 col-12">
+                    <h4 id="fecha"><b>Fecha</b></h4>
+                </div>
+                <div class="mb-4 col-12">
+                    <h4><b>Identificación del Consumidor Reclamante</b></h4>
+                </div>
+                <div class="mb-3">
+                    <label for="inputname">Nombre y Apellidos</label>
+                    <input type="text" class="form-control mt-1" id="name" name="name" placeholder="Nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="inputdomicilio">Domicilio</label>
+                    <input type="text" class="form-control mt-1" id="domicilio" name="domicilio"
+                        placeholder="Domicilio">
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="inputtelefono">Telefono</label>
+                        <input type="text" class="form-control mt-1" id="telefono" name="telefono"
+                            placeholder="Telefono">
+                    </div>
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="inputemail">Email</label>
+                        <input type="email" class="form-control mt-1" id="email" name="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="inputtipodocumento">Tipo de Documento</label>
+                        <select class="form-control mt-1" id="tipoDocumento" name="tipoDocumento">
+                            <option value="DNI">DNI</option>
+                            <option value="CarnetExtranjeria">Carnet de Extranjeria</option>
+                            <option value="Pasaporte">Pasaporte</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="inputnumdocumento">Numero de Documento</label>
+                        <input type="text" class="form-control mt-1" id="numeroDocumento" name="numeroDocumento"
+                            placeholder="Numero de Documento">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="inputnamepadres">Padre o Madre (Para el caso de menores de edad)</label>
+                    <input type="text" class="form-control mt-1" id="namePadres" name="namePadres"
+                        placeholder="Nombres y Apellidos del Padre o Madre">
+                </div>
+                <div class="mb-4 mt-5 col-12">
+                    <h4><b>Identificación del Bien Contratado</b></h4>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="form-check py-2">
+                            <input class="form-check-input" type="radio" name="flexRadioBien" id="flexRadioBien1"
+                                value="Producto" checked>
+                            <label class="form-check-label" for="flexRadioBien1">
+                                Producto
+                            </label>
+                        </div>
+                        <div class="form-check py-2">
+                            <input class="form-check-input" type="radio" name="flexRadioBien" id="flexRadioBien2"
+                                value="Servicio">
+                            <label class="form-check-label" for="flexRadioBien2">
+                                Servicio
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-sm-12">
+                        <div class="form-group  mb-3">
+                            <label for="inputmonto">Monto Reclamado</label>
+                            <input type="text" class="form-control mt-1" id="monto" name="monto"
+                                placeholder="Monto Reclamado">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="inputdescripcionitem">Descripción</label>
+                            <input type="text" class="form-control mt-1" id="descripcionitem" name="descripcionItem"
+                                placeholder="Descripción">
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="form-group col-md-4 mb-3">
+                        <label for="inputdepartamento">Departamento</label>
+                        <select  class="form-control mt-1" id="departamento" name="departamento">
+                            <option value="AMAZONAS">AMAZONAS</option>
+                            <option value="ANCASH">ANCASH</option>
+                            <option value="APURIMAC">APURIMAC</option>
+                            <option value="AREQUIPA">AREQUIPA</option>
+                            <option value="AYACUCHO">AYACUCHO</option>
+                            <option value="CAJAMARCA">CAJAMARCA</option>
+                            <option value="CALLAO">CALLAO</option>
+                            <option value="CUSCO">CUSCO</option>
+                            <option value="HUANCAVELICA">HUANCAVELICA</option>
+                            <option value="HUANUCO">HUANUCO</option>
+                            <option value="ICA">ICA</option>
+                            <option value="JUNIN">JUNIN</option>
+                            <option value="LA_LIBERTAD">LA LIBERTAD</option>
+                            <option value="LAMBAYEQUE">LAMBAYEQUE</option>
+                            <option value="LIMA">LIMA</option>
+                            <option value="LORETO">LORETO</option>
+                            <option value="MADRE_DE_DIOS">MADRE DE DIOS</option>
+                            <option value="MOQUEGUA">MOQUEGUA</option>
+                            <option value="PASCO">PASCO</option>
+                            <option value="PIURA">PIURA</option>
+                            <option value="PUNO">PUNO</option>
+                            <option value="SAN_MARTIN">SAN MARTIN</option>
+                            <option value="TACNA">TACNA</option>
+                            <option value="TUMBES">TUMBES</option>
+                            <option value="UCAYALI">UCAYALI</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4 mb-3">
+                        <label for="inputprovincia">Provincia</label>
+                        <input type="text" class="form-control mt-1" id="provincia" name="provincia" placeholder="Provincia">
+                    </div>
+                    <div class="form-group col-md-4 mb-3">
+                        <label for="inputdistrito">Distrito</label>
+                        <input type="text" class="form-control mt-1" id="distrito" name="distrito" placeholder="Distrito">
+                    </div>
+                </div> -->
+                <div class="mb-4 mt-5 col-12">
+                    <h4><b>Detalle de la Reclamación y Pedido del Consumidor</b></h4>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                        <div class="form-check py-2">
+                            <input class="form-check-input" type="radio" name="flexRadioTipo" id="flexRadioTipo1"
+                                value="Reclamo" checked>
+                            <label class="form-check-label" for="flexRadioTipo1">
+                                <b>Reclamo</b> (Disconformidad relacionada a los productos o servicios)
+                            </label>
+                        </div>
+                        <div class="form-check py-2">
+                            <input class="form-check-input" type="radio" name="flexRadioTipo" id="flexRadioTipo2"
+                                value="Queja">
+                            <label class="form-check-label" for="flexRadioTipo2">
+                                <b>Queja</b> (Disconformidad no relacionada a los productos o servicios; sino malestar o descontento respecto a la atención al público)
+                            </label>
+                        </div>
+                    </div>
+                <div class="my-3">
+                    <label for="inputmessage">Detalle</label>
+                    <textarea class="form-control mt-1" id="message" name="message" placeholder="Detalle"
+                        rows="8"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="inputpedido">Pedido</label>
+                    <textarea class="form-control mt-1" id="pedido" name="pedido" placeholder="Pedido"
+                        rows="8"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col text-end mt-2">
+                        <button type="submit" value="Send" class="btn custom-btn-success btn-lg px-3">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- End Contact -->
+
+
+    <!-- Start Footer -->
+    <footer class="bg-dark" id="tempaltemo_footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-8 pt-5">
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><img src="assets/img/logo.jpeg" alt="Logo" style="height:40px; max-width: 80px;"></li>
+                        <li>
+                            <i class="fas fa-map-marker-alt fa-fw"></i>
+                            Av. Sin Nombre 123 Arequipa - Peru
+                        </li>
+                        <li>
+                            <i class="fa fa-phone fa-fw"></i>
+                            <a class="text-decoration-none" href="tel:912345678">912345678</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope fa-fw"></i>
+                            <a class="text-decoration-none" href="mailto:correo@mih.com">correo@mih.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 pt-5">
+                    <div class="col-auto me-auto">
+                        <ul class="list-inline text-left footer-icons">
+                            <li class="list-inline-item border border-light rounded-circle text-center">
+                                <a class="text-light text-decoration-none" target="_blank"
+                                    href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                            </li>
+                            <li class="list-inline-item border border-light rounded-circle text-center">
+                                <a class="text-light text-decoration-none" target="_blank"
+                                    href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                            </li>
+                            <li class="list-inline-item border border-light rounded-circle text-center">
+                                <a class="text-light text-decoration-none" target="_blank"
+                                    href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                            </li>
+                            <li class="list-inline-item border border-light rounded-circle text-center">
+                                <a class="text-light text-decoration-none" target="_blank"
+                                    href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="w-100 bg-black py-3">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-12">
+                        <p class="text-left text-light">
+                            Copyright &copy; 2026 Microfinance Integrity Holding
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Reclamo enviado</h5>
+                </div>
+
+                <div class="modal-body">
+                    Tu reclamo fue enviado correctamente.
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn custom-btn-success" id="btnOk">OK</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="errorModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Error</h5>
+                </div>
+
+                <div class="modal-body">
+                    Hubo un error en el envio del reclamo, por favor contacte al siguiente numero 99999999.
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn custom-btn-success" id="btnCerrar">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+
+
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <!-- <script>
+(function(){
+  emailjs.init("wdGfTZfbCIEu2oqam");
+})();
+
+function enviarFormulario(e) {
+  e.preventDefault();
+
+  emailjs.send("service_1orbrfz", "template_zrqvg69", {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    title: document.getElementById("subject").value,
+    message: document.getElementById("message").value
+  }).then(() => {
+    alert("Mensaje enviado correctamente");
+  }, (error) => {
+    alert("Error al enviar");
+  });
+}
+</script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+                publicKey: "wdGfTZfbCIEu2oqam",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_iv8kt1k', 'template_zrqvg69', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                        const modal = new bootstrap.Modal(document.getElementById('successModal'));
+                        modal.show();
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                        const modal = new bootstrap.Modal(document.getElementById('errorModal'));
+                        modal.show();
+                    });
+            });
+            document.getElementById('btnOk').addEventListener('click', function () {
+                window.location.href = "index.html";
+            });
+        }
+    </script>
+    <!-- End Script -->
+</body>
+
+</html>
