@@ -2,9 +2,12 @@
 Custom Css
 */
 .custom-header{
-    /* background-color: #AE3335; */
+    background-color: #fff !important;
     padding-top: .1rem !important;
     padding-bottom: .1rem !important;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .text-header{

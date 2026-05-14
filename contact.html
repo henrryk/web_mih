@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Zay Shop - Contact</title>
+    <title>Microfinance Integrity Holding</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -106,38 +106,38 @@
                     <h4><b>Identificación del Consumidor Reclamante</b></h4>
                 </div>
                 <div class="mb-3">
-                    <label for="inputname">Nombre y Apellidos</label>
-                    <input type="text" class="form-control mt-1" id="name" name="name" placeholder="Nombre">
+                    <label for="inputname">Nombre y Apellidos <b style="color: red;">*</b></label>
+                    <input type="text" class="form-control mt-1" id="name" name="name" placeholder="Nombre" required>
                 </div>
                 <div class="mb-3">
-                    <label for="inputdomicilio">Domicilio</label>
+                    <label for="inputdomicilio">Domicilio <b style="color: red;">*</b></label>
                     <input type="text" class="form-control mt-1" id="domicilio" name="domicilio"
-                        placeholder="Domicilio">
+                        placeholder="Domicilio" required>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-6 mb-3">
-                        <label for="inputtelefono">Telefono</label>
+                        <label for="inputtelefono">Telefono <b style="color: red;">*</b></label>
                         <input type="text" class="form-control mt-1" id="telefono" name="telefono"
-                            placeholder="Telefono">
+                            placeholder="Ingrese un número de teléfono válido de 9 dígitos" required pattern="[0-9]{9}">
                     </div>
                     <div class="form-group col-md-6 mb-3">
-                        <label for="inputemail">Email</label>
-                        <input type="email" class="form-control mt-1" id="email" name="email" placeholder="Email">
+                        <label for="inputemail">Email <b style="color: red;">*</b></label>
+                        <input type="email" class="form-control mt-1" id="email" name="email" placeholder="Email" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-6 mb-3">
-                        <label for="inputtipodocumento">Tipo de Documento</label>
-                        <select class="form-control mt-1" id="tipoDocumento" name="tipoDocumento">
+                        <label for="inputtipodocumento">Tipo de Documento <b style="color: red;">*</b></label>
+                        <select class="form-control mt-1" id="tipoDocumento" name="tipoDocumento" required>
                             <option value="DNI">DNI</option>
                             <option value="CarnetExtranjeria">Carnet de Extranjeria</option>
                             <option value="Pasaporte">Pasaporte</option>
                         </select>
                     </div>
                     <div class="form-group col-md-6 mb-3">
-                        <label for="inputnumdocumento">Numero de Documento</label>
+                        <label for="inputnumdocumento">Numero de Documento <b style="color: red;">*</b></label>
                         <input type="text" class="form-control mt-1" id="numeroDocumento" name="numeroDocumento"
-                            placeholder="Numero de Documento">
+                            placeholder="Numero de Documento" required>
                     </div>
                 </div>
                 <div class="mb-3">
@@ -167,14 +167,14 @@
                     </div>
                     <div class="col-md-8 col-sm-12">
                         <div class="form-group  mb-3">
-                            <label for="inputmonto">Monto Reclamado</label>
+                            <label for="inputmonto">Monto Reclamado <b style="color: red;">*</b></label>
                             <input type="text" class="form-control mt-1" id="monto" name="monto"
-                                placeholder="Monto Reclamado">
+                                placeholder="Monto Reclamado" required pattern="^\d+(\.\d{1,2})?$">
                         </div>
                         <div class="form-group mb-3">
-                            <label for="inputdescripcionitem">Descripción</label>
+                            <label for="inputdescripcionitem">Descripción <b style="color: red;">*</b></label>
                             <input type="text" class="form-control mt-1" id="descripcionitem" name="descripcionItem"
-                                placeholder="Descripción">
+                                placeholder="Descripción" required>
                         </div>
                     </div>
                 </div>
@@ -238,14 +238,14 @@
                         </div>
                     </div>
                 <div class="my-3">
-                    <label for="inputmessage">Detalle</label>
-                    <textarea class="form-control mt-1" id="message" name="message" placeholder="Detalle"
-                        rows="8"></textarea>
+                    <label for="inputmessage">Detalle <b style="color: red;">*</b></label>
+                    <textarea class="form-control mt-1" id="detalle" name="detalle" placeholder="Detalle"
+                        rows="8" required></textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="inputpedido">Pedido</label>
+                    <label for="inputpedido">Pedido <b style="color: red;">*</b></label>
                     <textarea class="form-control mt-1" id="pedido" name="pedido" placeholder="Pedido"
-                        rows="8"></textarea>
+                        rows="8" required></textarea>
                 </div>
                 <div class="row">
                     <div class="col text-end mt-2">
