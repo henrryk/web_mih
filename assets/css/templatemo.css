@@ -129,7 +129,7 @@ body, ul, li, p, a, label, input, div {
   color: #000 !important;
 }
 /* Services */
-.services-icon-wap {transition: .3s;}
+.services-icon-wap {transition: .3s; background: #f4f5f7;}
 .services-icon-wap:hover, .services-icon-wap:hover i {color: #fff;}
 .services-icon-wap:hover {background: #AE3335;}
 .services-icon-wap:hover .custom-text-success {color: #fff !important;}

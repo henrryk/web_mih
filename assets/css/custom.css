@@ -2,21 +2,80 @@
 Custom Css
 */
 .custom-header{
-    background-color: #fff !important;
+    /* background-color: #fff !important; */
+    
+    /* background-color: linear-gradient(to bottom, #ffffff 0%, #AE3335 100%) !important;  */
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important; */
+    background-image: url('../img/background-header.png') !important;  /* Imagen de fondo personalizada */
+    background-repeat: no-repeat !important;
+    
+    /* Centra la imagen verticalmente y la alinea a la derecha para que los gráficos siempre se vean */
+    background-position: right center !important; 
+    
+    /* Hace que la imagen cubra todo el espacio sin deformarse */
+    background-size: cover !important; 
+    
     padding-top: .1rem !important;
     padding-bottom: .1rem !important;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+/* --- Para Pantallas Medianas (Tablets) --- */
+@media (max-width: 992px) {
+    .custom-header {
+        /* Cambiamos a 'contain' para que la imagen no se recorte agresivamente */
+        background-size: contain !important;
+        /* Forzamos que la parte derecha (donde están las líneas) se mantenga visible */
+        background-position: right top !important;
+        /* Un fondo blanco de respaldo por si la imagen no cubre el 100% del ancho */
+        background-color: #ffffff !important; 
+    }
 }
 
+/* --- Para Pantallas Pequeñas (Celulares / Móviles) --- */
+@media (max-width: 576px) {
+    .custom-header {
+        /* En móviles el espacio es muy reducido. Ajustamos la posición para que el 
+           gráfico rojo de la esquina inferior izquierda no tape el texto del menú */
+        background-position: 85% center !important;
+        background-size: cover !important;
+    }
+}
 .text-header{
     color: #AE3335 !important;
     font-weight: bold !important;
 }
 
+/* --- Botón de Acción en el Header --- */
+.btn-header-cta {
+    display: inline-block;
+    border: 1px solid #AE3335;
+    color: #f4f5f7;
+    padding: 8px 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-header-cta:hover {
+    background-color: #AE3335;
+    box-shadow: 0 0 15px rgba(174, 51, 53, 0.4);
+}
+
 .container{
     width: 80%;
+}
+
+.backgroundcolor-body{
+    /* background-color: rgba(235, 225, 240, 1.0) !important; */
+    background-color: #e9eef5 !important;
 }
 
 .custom-btn-success {
@@ -44,4 +103,158 @@ Custom Css
 .form-check-input:checked{
     background-color: #AE3335 !important;
     border-color: #AE3335 !important;
+}
+
+
+.portfolio-container {
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 140px; /* Espaciado amplio entre secciones para dar aire */
+}
+/* --- Estructura Layout de Secciones --- */
+.info-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Invierte el orden de los bloques en pantallas grandes */
+.info-section.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Estilo para la sección centralizada del mapa */
+.info-section.central {
+    flex-direction: column;
+    text-align: center;
+}
+
+/* --- Elementos de Contenido --- */
+.info-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.info-content-center {
+    max-width: 700px;
+    margin-bottom: 40px;
+}
+
+.section-tag {
+    color: var(--brand-color);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+}
+
+/* --- Contenedores de Imágenes (Efectos Tecnológicos) --- */
+.info-media, .info-media-full {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.info-media img, .info-media-full img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    background-color: var(--bg-card);
+    border: 1px solid rgba(174, 51, 53, 0.15); /* Borde sutil con el rojo corporativo */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 
+                0 0 50px rgba(174, 51, 53, 0.05); /* Brillo sutil de fondo */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Interacción sutil al pasar el cursor sobre la infografía */
+.info-media img:hover, .info-media-full img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 
+                0 0 60px rgba(174, 51, 53, 0.15); /* Aumenta el glow rojo */
+}
+
+/* --- Diseño Adaptable (Responsive) --- */
+@media (max-width: 968px) {
+    .portfolio-container {
+        gap: 80px;
+        padding: 40px 20px;
+    }
+    
+    .info-section, .info-section.reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .info-content {
+        max-width: 100%;
+    }
+}
+
+/* --- Menú de Navegación --- */
+.nav-menu {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-link {
+    color: #9ba4b4; /* Color atenuado por defecto */
+    text-decoration: none;
+    font-size: 1.15rem !important;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+/* Enlace activo y efectos al pasar el cursor (Hover) */
+.nav-link:hover, .nav-link.active {
+    color: #f4f5f7; /* Cambia a blanco nítido */
+}
+
+/* Línea animada inferior con tu color AE3335 */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #AE3335;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 8px #AE3335; /* Brillo de neón en la línea */
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+/* --- Ajuste para pantallas grandes: imagen 70% / texto 30% --- */
+@media (min-width: 992px) {
+    /* Aplica solo a secciones normales (no central) */
+    .info-section:not(.central) > .info-media {
+        flex: 0 0 70%;
+        max-width: 70%;
+    }
+
+    .info-section:not(.central) > .info-content {
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+
+    /* Mantener comportamiento para versiones con columnas explícitas (col-*) */
+    .info-section .info-media img {
+        width: 100%;
+        height: auto;
+    }
 }

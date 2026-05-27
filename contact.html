@@ -27,13 +27,13 @@
 
 <body>
 
-
     <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light shadow custom-header">
+    <nav class="navbar navbar-expand-lg navbar-light shadow custom-header" >
         <div class="container d-flex justify-content-between align-items-center">
 
+            <!-- Logotipo -->
             <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
-                <img src="assets/img/logo.jpeg" alt="Logo" style="height:80px;">
+                <img src="assets/img/logo_transparente.png" alt="Logo" style="height:80px;">
             </a>
 
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
@@ -42,23 +42,27 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+            <!-- Menú de Navegación -->
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-end"
                 id="templatemo_main_nav">
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-header" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-header" href="index.html"><b>Inicio</b></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-header" href="about.html">Detalle</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-header" href="contact.html"><b>Libro de Reclamaciones</b></a>
+                            <a href="#divContacto" class="nav-link  text-header">Contáctanos</a>
                         </li>
                     </ul>
                 </div>
             </div>
-
         </div>
     </nav>
     <!-- Close Header -->
@@ -83,19 +87,28 @@
 
 
     <!-- Start Content Page -->
+     <section class="pt-5">
+        <!-- <div class="container pt-5">
+            <div class="row align-items-center py-3">
+                <div class="col-md-8">
+                    <h1 class="custom-text-primary">Libro de Reclamaciones</h1>
+                </div>
+            </div>
+        </div> -->
+    
     <div class="container-fluid bg-light py-5">
-        <div class="col-md-6 m-auto text-center">
-            <h1 class="h1 text-header"><b>Libro de Reclamaciones</b></h1>
+        <div class="col-md-6 m-auto text-center pt-5">
+            <!-- <h1 class="h1 text-header"><b>Libro de Reclamaciones</b></h1> -->
             <img class="img-fluid" src="./assets/img/libro_reclamaciones.jpg" alt="">
-            <p>
+            <!-- <p>
                 Complete el siguiente formulario.
-            </p>
+            </p> -->
         </div>
     </div>
-
+     </section>
 
     <!-- Start Contact -->
-    <div class="container py-5">
+    <div class="container-fluid bg-light py-5">
         <div class="row pb-5">
             <!-- <form class="col-md-9 m-auto" action="https://formspree.io/f/xrervnnl" method="post" role="form"> -->
             <form class="col-md-9 m-auto" id="contact-form">
@@ -111,8 +124,8 @@
                 </div>
                 <div class="mb-3">
                     <label for="inputdomicilio">Domicilio <b style="color: red;">*</b></label>
-                    <input type="text" class="form-control mt-1" id="domicilio" name="domicilio"
-                        placeholder="Domicilio" required>
+                    <input type="text" class="form-control mt-1" id="domicilio" name="domicilio" placeholder="Domicilio"
+                        required>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-6 mb-3">
@@ -122,7 +135,8 @@
                     </div>
                     <div class="form-group col-md-6 mb-3">
                         <label for="inputemail">Email <b style="color: red;">*</b></label>
-                        <input type="email" class="form-control mt-1" id="email" name="email" placeholder="Email" required>
+                        <input type="email" class="form-control mt-1" id="email" name="email" placeholder="Email"
+                            required>
                     </div>
                 </div>
                 <div class="row">
@@ -222,30 +236,31 @@
                     <h4><b>Detalle de la Reclamación y Pedido del Consumidor</b></h4>
                 </div>
                 <div class="col-md-12 col-sm-12">
-                        <div class="form-check py-2">
-                            <input class="form-check-input" type="radio" name="flexRadioTipo" id="flexRadioTipo1"
-                                value="Reclamo" checked>
-                            <label class="form-check-label" for="flexRadioTipo1">
-                                <b>Reclamo</b> (Disconformidad relacionada a los productos o servicios)
-                            </label>
-                        </div>
-                        <div class="form-check py-2">
-                            <input class="form-check-input" type="radio" name="flexRadioTipo" id="flexRadioTipo2"
-                                value="Queja">
-                            <label class="form-check-label" for="flexRadioTipo2">
-                                <b>Queja</b> (Disconformidad no relacionada a los productos o servicios; sino malestar o descontento respecto a la atención al público)
-                            </label>
-                        </div>
+                    <div class="form-check py-2">
+                        <input class="form-check-input" type="radio" name="flexRadioTipo" id="flexRadioTipo1"
+                            value="Reclamo" checked>
+                        <label class="form-check-label" for="flexRadioTipo1">
+                            <b>Reclamo</b> (Disconformidad relacionada a los productos o servicios)
+                        </label>
                     </div>
+                    <div class="form-check py-2">
+                        <input class="form-check-input" type="radio" name="flexRadioTipo" id="flexRadioTipo2"
+                            value="Queja">
+                        <label class="form-check-label" for="flexRadioTipo2">
+                            <b>Queja</b> (Disconformidad no relacionada a los productos o servicios; sino malestar o
+                            descontento respecto a la atención al público)
+                        </label>
+                    </div>
+                </div>
                 <div class="my-3">
                     <label for="inputmessage">Detalle <b style="color: red;">*</b></label>
-                    <textarea class="form-control mt-1" id="detalle" name="detalle" placeholder="Detalle"
-                        rows="8" required></textarea>
+                    <textarea class="form-control mt-1" id="detalle" name="detalle" placeholder="Detalle" rows="8"
+                        required></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="inputpedido">Pedido <b style="color: red;">*</b></label>
-                    <textarea class="form-control mt-1" id="pedido" name="pedido" placeholder="Pedido"
-                        rows="8" required></textarea>
+                    <textarea class="form-control mt-1" id="pedido" name="pedido" placeholder="Pedido" rows="8"
+                        required></textarea>
                 </div>
                 <div class="row">
                     <div class="col text-end mt-2">
@@ -258,69 +273,7 @@
     <!-- End Contact -->
 
 
-    <!-- Start Footer -->
-    <footer class="bg-dark" id="tempaltemo_footer">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-md-8 pt-5">
-                    <ul class="list-unstyled text-light footer-link-list">
-                        <li><img src="assets/img/logo.jpeg" alt="Logo" style="height:40px; max-width: 80px;"></li>
-                        <li>
-                            <i class="fas fa-map-marker-alt fa-fw"></i>
-                            Av. Sin Nombre 123 Arequipa - Peru
-                        </li>
-                        <li>
-                            <i class="fa fa-phone fa-fw"></i>
-                            <a class="text-decoration-none" href="tel:912345678">912345678</a>
-                        </li>
-                        <li>
-                            <i class="fa fa-envelope fa-fw"></i>
-                            <a class="text-decoration-none" href="mailto:correo@mih.com">correo@mih.com</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-md-4 pt-5">
-                    <div class="col-auto me-auto">
-                        <ul class="list-inline text-left footer-icons">
-                            <li class="list-inline-item border border-light rounded-circle text-center">
-                                <a class="text-light text-decoration-none" target="_blank"
-                                    href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
-                            </li>
-                            <li class="list-inline-item border border-light rounded-circle text-center">
-                                <a class="text-light text-decoration-none" target="_blank"
-                                    href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
-                            </li>
-                            <li class="list-inline-item border border-light rounded-circle text-center">
-                                <a class="text-light text-decoration-none" target="_blank"
-                                    href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
-                            </li>
-                            <li class="list-inline-item border border-light rounded-circle text-center">
-                                <a class="text-light text-decoration-none" target="_blank"
-                                    href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="w-100 bg-black py-3">
-            <div class="container">
-                <div class="row pt-2">
-                    <div class="col-12">
-                        <p class="text-left text-light">
-                            Copyright &copy; 2026 Microfinance Integrity Holding
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </footer>
-    <!-- End Footer -->
+    <div id="footer-container"></div>
 
     <!-- Modal -->
     <div class="modal fade" id="successModal" tabindex="-1">
@@ -371,6 +324,7 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/footer-loader.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
